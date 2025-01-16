@@ -1,0 +1,40 @@
+Endpoint Name: /products
+Method: GET
+Description:Fetch all available products stored in sanity.
+Response:[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "price": 100,
+    "stock": 25,
+    "image": "https://example.com/product-a.jpg"
+  }
+]
+
+Endpoint Name: /order
+Method: POST
+Description:Save a new order in Sanity, including customer and product details, along with payment status.
+Payload:{
+  "customerInfo": {
+    "name": "abc",
+    "email": "abc@example.com",
+    "address": "abc Street"
+  },
+  "productDetails": [
+    {
+      "productId": 1,
+      "quantity": 2
+    }
+  ],
+  "paymentStatus": "Paid"
+}
+
+Endpoint Name: /shipment
+Method: GET
+Description: Retrieve the current shipment status for a specific order using a third-party API.
+Response: {
+  "shipmentId": "SHIP12345",
+  "orderId": "ORD12345",
+  "status": "In Transit",
+  "expectedDeliveryDate": "2025-01-20"
+}
