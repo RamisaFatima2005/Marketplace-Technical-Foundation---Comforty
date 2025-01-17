@@ -7,7 +7,7 @@ Response:[
     "name": "Product 1",
     "price": 100,
     "stock": 25,
-    "image": "https://example.com/product-a.jpg"
+    "image": "https://abc.com/product-a.jpg"
   }
 ]
 
